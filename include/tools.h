@@ -31,6 +31,7 @@
 #ifndef _TOOLS_H_
 #define _TOOLS_H_
 
+#include <string>
 #include <time.h>
 #include <GL/glew.h>
 #include <GL/glut.h>
@@ -45,7 +46,7 @@ static double g_iTimerFPSCount;
 double timerClock();
 void timerStart();
 double timerFrameStart();
-void timerFrameEnd(const char *progName);
+void timerFrameEnd(const std::string& progName);
 
 
 // mirror texture

@@ -37,7 +37,7 @@
 
 Bmp::Bmp(){ data=0; }
 
-Bmp::Bmp(char *fileName)
+Bmp::Bmp(const std::string& fileName)
 {
     data=0;
 	readBmp(fileName);
@@ -68,10 +68,10 @@ void Bmp::setData(char *dataX)	{	data = dataX;	}
 
 
 
-bool Bmp::readBmp(char *fileName)
+bool Bmp::readBmp( const std::string& fileName)
 {
     // load image
-    image.load( fileName );
+    image.load( fileName.c_str() );
     image.mirror('y');
 
     // ensure RGB

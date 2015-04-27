@@ -69,7 +69,7 @@ double timerFrameStart()
     return g_dTimerFrame;
 }
 
-void timerFrameEnd(const char *progName)
+void timerFrameEnd(const std::string& progName)
 {
     // how long has it been since last measuring the fps
     double elapsed = timerClock() - g_dTimerFPS;
@@ -77,7 +77,7 @@ void timerFrameEnd(const char *progName)
     {
         // awesome (most overused word in the universe), show FPS
         char text[255];
-        sprintf(text,"%s @ %.2f fps",progName,g_iTimerFPSCount);
+        sprintf(text,"%s @ %.2f fps",progName.c_str(),g_iTimerFPSCount);
         glutSetWindowTitle(text);
 
         // reset FPS counter

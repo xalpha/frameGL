@@ -34,6 +34,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <iostream>
 
 #include <GL/glew.h>
 #include <GL/glut.h>
@@ -57,8 +58,8 @@
 #endif
 
 
-static char *PROGNAME = "BallsInABox \"Computer Graphics\" 2005";
-static char *AUTHOR   = "Alexandru Duliu (duliu@in.tum.de) & Markus Bucher (bucherm@in.tum.de)";
+static std::string g_sProgramName( "BallsInABox \"Computer Graphics\" 2005" );
+static std::string g_sAuthor("Alexandru Duliu (duliu@in.tum.de) & Markus Bucher (bucherm@in.tum.de)");
 
 /*
  * VARIABLE declarations

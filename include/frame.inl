@@ -685,7 +685,7 @@ inline void displayfunc()
 		}
 	}
 		
-    timerFrameEnd(PROGNAME);
+    timerFrameEnd(g_sProgramName.c_str());
     glutSwapBuffers();     // swap the front and back buffer to display the next frame.
 }
 

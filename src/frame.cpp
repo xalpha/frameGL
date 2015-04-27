@@ -984,37 +984,35 @@ void renderShadows(bool bigSphere, bool smallSpheres,bool lights, bool mirror, b
 
 
 void printHelp(void) {
-	printf("\n%s\n",PROGNAME);
-	for (int i = 0;i<(int)strlen(PROGNAME);i++) printf("="); printf("\n");
-	printf("   q, ESC : Quit\n");	
-	printf("   F1     : This help text\n");
-	printf("   a      : toggle sphere animation\n");
-	printf("   A      : toggle light animation\n");
-	printf("   b      : toggle bunny\n");
-	printf("   B      : toggle glass bunny\n");
-	printf("   c      : toggle cubemap\n");
-	printf("   f      : toggle fulscreen\n");
-	printf("   F      : toggle bunny fur\n");
-	printf("   g      : cycle particle gravity fields\n");
-	printf("   G      : cycle particle gravity fields (reverse)\n");
-	printf("   h      : toggle Wather hose\n");
-	printf("   l,L    : toggle ligthing\n");
-	printf("   m      : toggle mirror\n");
-	printf("   M      : toggle stencil buffer\n");
-	printf("   o      : toggle cubemap offset calculation\n");
-	printf("   p      : toggle particles\n");
-	printf("   P      : cycle particle emitter\n");
-	printf("   r      : reset view\n");
-	printf("   R      : reset rotations\n");
-	printf("   s      : toggle shadows\n");
-	printf("   S      : capture frame\n");
-	printf("   t      : toggle textures\n");
-	printf("   w,W    : toggle wireframe\n");
-	printf("   x      : toggle particle aging\n");
-	printf("   X      : toggle particle movement\n");
-	printf("   mouse  : Drag around scene.\n");
-	for (int i = 0;i<(int)strlen(PROGNAME);i++) printf("="); printf("\n");
-	printf("%s\n\n",AUTHOR);
+    std::cout << g_sProgramName << std::endl;
+    std::cout << "\tq, ESC : Quit" << std::endl;
+    std::cout << "\tF1     : This help text" << std::endl;
+    std::cout << "\ta      : toggle sphere animation" << std::endl;
+    std::cout << "\tA      : toggle light animation" << std::endl;
+    std::cout << "\tb      : toggle bunny" << std::endl;
+    std::cout << "\tB      : toggle glass bunny" << std::endl;
+    std::cout << "\tc      : toggle cubemap" << std::endl;
+    std::cout << "\tf      : toggle fulscreen" << std::endl;
+    std::cout << "\tF      : toggle bunny fur" << std::endl;
+    std::cout << "\tg      : cycle particle gravity fields" << std::endl;
+    std::cout << "\tG      : cycle particle gravity fields (reverse)" << std::endl;
+    std::cout << "\th      : toggle Wather hose" << std::endl;
+    std::cout << "\tl,L    : toggle ligthing" << std::endl;
+    std::cout << "\tm      : toggle mirror" << std::endl;
+    std::cout << "\tM      : toggle stencil buffer" << std::endl;
+    std::cout << "\to      : toggle cubemap offset calculation" << std::endl;
+    std::cout << "\tp      : toggle particles" << std::endl;
+    std::cout << "\tP      : cycle particle emitter" << std::endl;
+    std::cout << "\tr      : reset view" << std::endl;
+    std::cout << "\tR      : reset rotations" << std::endl;
+    std::cout << "\ts      : toggle shadows" << std::endl;
+    std::cout << "\tS      : capture frame" << std::endl;
+    std::cout << "\tt      : toggle textures" << std::endl;
+    std::cout << "\tw,W    : toggle wireframe" << std::endl;
+    std::cout << "\tx      : toggle particle aging" << std::endl;
+    std::cout << "\tX      : toggle particle movement" << std::endl;
+    std::cout << "\tmouse  : Drag around scene." << std::endl;
+    std::cout << g_sAuthor << std::endl;
 }
 
 /*
@@ -1026,7 +1024,7 @@ int main(int argc, char **argv) {
     glutInitWindowSize(g_iWinWidth,g_iWinHeight);   // initial size of viewport (client area of window)
     glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH|GLUT_STENCIL);    // Requests a double RGB-framebuffer with depth- and stencil-buffer
 
-    glutCreateWindow(PROGNAME);	 // Creates the window.
+    glutCreateWindow(g_sProgramName.c_str());	 // Creates the window.
 
 	// init GLEW
 	int err = glewInit();

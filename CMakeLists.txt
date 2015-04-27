@@ -79,7 +79,11 @@ set( FrameGL_INCLUDE_DIRS
 set( FrameGL_LINK_LIBS
     ${OPENGL_LIBRARIES}
     ${GLUT_glut_LIBRARY}
-    ${GLEW_LIBRARY} )
+    ${GLEW_LIBRARY}
+    -lm
+    -lpthread )
+
+message("${FrameGL_LINK_LIBS}")
 
 # set compile definitions
 set( FrameGL_COMPILE_DEFINITIONS _USE_MATH_DEFINES )

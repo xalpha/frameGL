@@ -28,13 +28,15 @@
  *                                                             *
  ***************************************************************/
 
+#include <string>
+
 #include "texture.h"
 
-GLuint loadTexture(char *filepath, GLenum format)
+GLuint loadTexture(const std::string& filepath, GLenum format)
 {
 	unsigned int tex;
 	Bmp texture;
-	texture.readBmp( filepath);
+    texture.readBmp( filepath );
 
 	glGenTextures( 1, &tex);
 	

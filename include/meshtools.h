@@ -29,7 +29,7 @@
  ***************************************************************/
 
 
-void readMesh( char* filename,
+void readMesh( const std::string& filename,
                float** vertices, int& vertexSize,
                unsigned int** indices, int& indexSize );
 

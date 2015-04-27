@@ -45,7 +45,7 @@
  Loads a texture from file "filepath" and sets TexParameters.
  Returns the newly generated texture id.
 */
-GLuint loadTexture(char *filepath, GLenum format);
+GLuint loadTexture(const std::string&, GLenum format);
 
 GLuint genCellular(int density, int size, GLfloat color1[4], GLfloat color2[4]);
 

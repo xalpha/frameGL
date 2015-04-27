@@ -31,6 +31,7 @@
 #ifndef _BMP_
 #define _BMP_
 
+#include <string>
 #include <stdio.h>
 #include <stdlib.h>	
 #include <math.h>
@@ -53,7 +54,7 @@ class Bmp
 
 
 	Bmp();
-	Bmp(char *fileName);
+    Bmp(const std::string& fileName);
 	//Bmp(int width, int height, char format, char *data);
 
 	/*
@@ -71,7 +72,7 @@ class Bmp
 	*/
 
     //bool writeBmp(char *fileName);
-	bool readBmp(char *fileName);
+    bool readBmp(const std::string& fileName);
 };
 
 

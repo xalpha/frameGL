@@ -33,13 +33,13 @@
 #include <vector>
 
 
-void readMesh( char* filename,
+void readMesh( const std::string& filename,
                float** vertices, int& vertexSize,
                unsigned int** indices, int& indexSize )
 {
     // try to load the model
     std::ifstream file;
-    file.open( filename );
+    file.open( filename.c_str() );
     std::vector<float> vs;
     std::vector<unsigned int> is;
 
