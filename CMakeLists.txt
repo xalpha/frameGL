@@ -71,15 +71,13 @@ set( FrameGL_INCLUDE_DIRS
     extern/cimg
     $ENV{HOME}/.local/include
     ${OPENGL_INCLUDE_DIR}
-    ${GLUT_INCLUDE_DIR}
-    ${GLEW_INCLUDE_PATH}
     ${CMAKE_CURRENT_BINARY_DIR} )
 
 # set link libraries
 set( FrameGL_LINK_LIBS
     ${OPENGL_LIBRARIES}
-    ${GLUT_glut_LIBRARY}
-    ${GLEW_LIBRARY}
+    GLUT::GLUT
+    GLEW::glew
     -lm
     -lpthread )
 
@@ -96,4 +94,3 @@ add_executable( ${FrameGL_Target} ${FrameGL_SRC} ${FrameGL_INC} )
 
 # set link libraries
 target_link_libraries( ${FrameGL_Target} ${FrameGL_LINK_LIBS} )
-
